@@ -1,0 +1,85 @@
+#include<iostream>
+using namespace std;
+
+void findFirstPos(int arr[], int size, int target){
+
+  int s = 0;
+  int e = size-1;
+  int mid = s+(e-s)/2;
+  int ans = 0;
+  int flag = 0;
+
+  while (s <= e)
+  {
+    if(arr[mid] == target){
+      ans = mid;
+      flag = 1;
+      e = mid -1;
+    }
+
+    if(arr[mid] > target){
+      e = mid -1;
+    }else{
+      s = mid+1;
+    }
+    mid = s+(e-s)/2;
+  }
+
+  //printing the element
+  if(flag == 1){
+    cout << "The first pos of element of index : "<< ans <<endl;
+  }else{
+    cout << "The element is not found "<<endl;
+  }
+  
+
+}
+
+//finding the last position of element
+void findLastPos(int arr[], int size, int target){
+
+  int s = 0;
+  int e = size-1;
+  int mid = s+(e-s)/2;
+  int ans = 0;
+  int flag = 0;
+
+  while (s <= e)
+  {
+    if(arr[mid] == target){
+      ans = mid;
+      flag = 1;
+      s = mid +1;
+    }
+
+    if(arr[mid] > target){
+      e = mid -1;
+    }else{
+      s = mid+1;
+    }
+    mid = s+(e-s)/2;
+  }
+
+  //printing the element
+  if(flag == 1){
+    cout << "The first pos of element of index : "<< ans <<endl;
+  }else{
+    cout << "The element is not found "<<endl;
+  }
+  
+
+}
+ 
+int main()
+{
+ int arr[] = {1,2,2,2,3,4,5,5,6};
+ int size = sizeof(arr)/4;
+
+ int target = 2;
+
+ findFirstPos(arr,size,target);
+ findLastPos(arr,size,target);
+ 
+ 
+ return 0;
+}
