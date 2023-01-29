@@ -1,16 +1,18 @@
+//fing the maximum sum of in subarray
 #include<iostream>
 #include<limits.h>
 using namespace std;
  
 int main()
 {
+
  int arr[] = {-2,-3,4,-1,-2,1,5,-3};
  int size = sizeof(arr)/4;
 
  int ans = INT_MIN;
  int sum = 0;
 
-
+/*
  for (int i = 0; i < sizeof(arr)/4; i++)
  {
    sum +=arr[i];
@@ -20,11 +22,11 @@ int main()
  }
 
  cout << "The maximum subarry of sum : "<<ans<<endl;
- 
+ */
  
 
 
-/*
+
 //brute force
  for (int i = 0; i < size; i++)
  {
@@ -40,7 +42,7 @@ int main()
  }
 
  cout << "The ans is : "<<ans;
- */
+ 
  
  return 0;
 }

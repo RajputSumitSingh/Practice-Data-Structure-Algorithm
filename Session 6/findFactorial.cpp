@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
  void factorial(int n){
    
  int ans = 1;

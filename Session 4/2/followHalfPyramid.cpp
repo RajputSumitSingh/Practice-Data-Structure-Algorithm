@@ -19,7 +19,7 @@ int main()
      {
        if (j == 1 || j == i)
        {
-         cout << j << " ";
+         cout << j <<" ";
        }
        else
        {
