@@ -9,7 +9,6 @@ int main()
   int i=0;
  while (s != "stop")
  {
-
    cin >> s;
    arr[i] = s;
    i++;

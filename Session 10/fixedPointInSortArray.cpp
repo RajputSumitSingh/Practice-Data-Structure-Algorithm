@@ -3,7 +3,7 @@ using namespace std;
  
 int main()
 {
-  int arr[] = {-2,-1,0,3,3,5};
+  int arr[] = {-2,-1,0,3,4,5};
 
   int size = sizeof(arr)/4;
 

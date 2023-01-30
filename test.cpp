@@ -1,63 +1,40 @@
 #include<iostream>
 #include<math.h>
-#include<limits.h>    
+#include<limits.h>  
+#include<algorithm>  
 
 using namespace std;
 
+  int main(){
 
+  int arr[] = {-2,-1,0,3,3,5};
 
+  int size = sizeof(arr)/4;
 
-int main(){
-  int arr[4][4] = {{1,2,3,4},{11,2,4,55},{8,9,7,4},{9,4,5,1}};
+  int s = 0;
+  int e = size -1;
+  int mid = s+(e-s)/2;
+  int flag = 0;
 
-  int firstRow = 0;
-  int endRow = 4;
-  int firstCol = 0;
-  int endCol = 4;
-
-  int count = 0;
-  int total = sizeof(arr)/4;
-
-
-  while (count < total)
+  while (s <= e)
   {
-  //first row
-    for (int i = firstCol; i < endCol; i++)
-    {
-      cout << arr[firstRow][i]<<", ";
-      count++;
+    if(arr[mid] == mid){
+      flag = 1;
+      break;
     }
-    firstRow++;
 
-    //for last column
-    for (int i = firstRow; i < endRow; i++)
-    {
-      cout <<arr[i][endCol-1]<<", ";
-      count++;
+    if(arr[mid] > mid){
+      e = mid-1;
+    }else{
+      s = mid+1;
     }
-    endCol--;
-
-    //for end Row
-    for (int i = endCol-1; i >= firstCol ; i--)
-    {
-      cout << arr[endRow-1][i]<<", ";
-      count++;
-    }
-    endRow--;
-
-    //for first col
-    for (int i = endRow-1; i >=firstRow ; i--)
-    {
-      cout << arr[i][firstCol]<<", ";
-      count++;
-    }
-    firstCol++;
-    
-    
-    
-    
+    mid = s+(e-s)/2;
   }
-  
+
+  if(flag == 1){
+    cout << "found : "<<mid;
+  }
+      
 
     return 0;
 }

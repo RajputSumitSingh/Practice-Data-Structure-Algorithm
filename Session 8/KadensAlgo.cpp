@@ -12,7 +12,7 @@ int main()
  int ans = INT_MIN;
  int sum = 0;
 
-/*
+
  for (int i = 0; i < sizeof(arr)/4; i++)
  {
    sum +=arr[i];
@@ -22,11 +22,11 @@ int main()
  }
 
  cout << "The maximum subarry of sum : "<<ans<<endl;
- */
+ 
  
 
 
-
+/*
 //brute force
  for (int i = 0; i < size; i++)
  {
@@ -42,7 +42,7 @@ int main()
  }
 
  cout << "The ans is : "<<ans;
- 
+ */
  
  return 0;
 }

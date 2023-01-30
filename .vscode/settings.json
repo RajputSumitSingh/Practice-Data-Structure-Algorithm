@@ -3,5 +3,7 @@
     "iostream": "cpp",
     "ostream": "cpp"
   },
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
+  "workbench.preferredDarkColorTheme": "Visual Studio 2017 Dark - C++"
 }
